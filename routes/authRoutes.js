@@ -10,12 +10,17 @@ module.exports = app => {
   );
 
   //auth callback hander
-  app.get('/auth/google/callback', passport.authenticate('google'));
+  app.get(
+    '/auth/google/callback',
+    passport.authenticate('google'),
+    (req, res) => {
+      res.redirect('/');
+    }
+  );
 
   //logout route
   app.get('/api/logout', (req, res) => {
-    req.logout(); 
-    
+    req.logout();
   });
 
   //test
