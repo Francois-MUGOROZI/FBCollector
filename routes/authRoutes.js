@@ -14,13 +14,14 @@ module.exports = app => {
     '/auth/google/callback',
     passport.authenticate('google'),
     (req, res) => {
-      res.redirect('/');
+      res.redirect('/surveys');
     }
   );
 
   //logout route
   app.get('/api/logout', (req, res) => {
     req.logout();
+    res.redirect('/');
   });
 
   //test
