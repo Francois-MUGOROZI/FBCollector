@@ -30,6 +30,6 @@
     "passport-google-oauth20": "^1.0.0",
     "path-parser": "^2.0.2",
     "sendgrid": "^5.1.2",
-    "stripe": "^4.23.1"
+    "stripe": "^11.2.0"
   }
 }
